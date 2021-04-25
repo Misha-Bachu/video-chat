@@ -4,7 +4,7 @@ const videoContainer = document.querySelector('.js-video-container');
 
 function participantConnected(participant) {
     chatContainer.insertAdjacentHTML('beforeend',
-        `<div class="row"><div class="coll-auto">${participant.identity} joined.</div></div>`);
+        `<div class="row"><div class="col-auto">${participant.identity} joined.</div></div>`);
 
     console.log('Participant "%s" connected', participant.identity);
 
@@ -25,7 +25,7 @@ function participantDisconnected(participant) {
     console.log('Participant "%s" disconnected', participant.identity);
 
     chatContainer.insertAdjacentHTML('beforeend',
-        `<div class="row"><div class="coll-auto">${participant.identity} left the call.</div></div>`);
+        `<div class="row"><div class="col-auto">${participant.identity} left the call.</div></div>`);
 }
 
 function trackSubscribed(div, track) {
