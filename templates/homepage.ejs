@@ -1,0 +1,38 @@
+<% layout('layout/page') -%>
+
+<div class="container-fluid">
+    <div class="row justify-content-center p-5">
+        <div class="col-12">
+            Join to a room
+        </div>
+        <div class="col-12">
+            <form class="row justify-content-center js-join-to-room" method="get" action="/videoCall/live">
+                <div class="col-auto">
+                    <label for="userName" class="visually-hidden">Email</label>
+                    <input name="userName"
+                        type="text"
+                        class="form-control"
+                        id="userName"
+                        placeholder="Name"
+                        value="<%= typeof userName !== 'undefined' ? userName : '' %>"
+                        required
+                    >
+                </div>
+                <div class="col-auto">
+                    <label for="inputRoom" class="visually-hidden">Room ID</label>
+                    <input name="roomId"
+                        type="text"
+                        class="form-control"
+                        id="inputRoom"
+                        placeholder="Room ID"
+                        value="<%= typeof roomId !== 'undefined' ? roomId : '' %>"
+                        required
+                    >
+                </div>
+                    <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-3">Join</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
