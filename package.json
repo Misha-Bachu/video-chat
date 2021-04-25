@@ -6,11 +6,13 @@
     "scripts": {
         "server-watch": "nodemon app.js",
         "server-start": "node app.js",
+        "start": "webpack --config webpack.config.js && node app.js",
         "build": "webpack --config webpack.config.js",
         "watch": "webpack --watch",
         "lint": "eslint ./**/*.js"
     },
     "author": "misha.bachu",
+    "repository": "https://github.com/Misha-Bachu/video-chat",
     "license": "ISC",
     "dependencies": {
         "dotenv": "^8.2.0",
